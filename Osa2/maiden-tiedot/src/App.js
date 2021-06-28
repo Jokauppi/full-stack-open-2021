@@ -22,7 +22,7 @@ const App = () => {
         <input onChange={handleCountryFilter} value={countryFilter} />
       </div>
       {countryFilter 
-        ? <CountryContent countryList={countriesAll} countryFilter={countryFilter} />
+        ? <CountryContent countryList={countriesAll} countryFilter={countryFilter} setCountryFilter={setCountryFilter} />
         : <div>Specify a filter</div>
       }
     </div>
