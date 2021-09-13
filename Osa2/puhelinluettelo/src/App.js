@@ -59,6 +59,13 @@ const App = () => {
         setTimeout(() => {
           setNotificationMessage(null)
         }, 5000)
+      }).catch(error => {
+        console.log(error.response.data)
+        setNotificationColor({ main: 'firebrick', back: '#ffcccc'})
+          setNotificationMessage(error.response.data.error)
+          setTimeout(() => {
+            setNotificationMessage(null)
+          }, 5000)
       })
     }
   }
